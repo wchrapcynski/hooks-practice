@@ -10,7 +10,7 @@ function NumberCounter() {
     const [countByOne, setCountOne] = useState(0);
     const [countByFive, setCountFive] = useState(0);
 
-    // Similar to componentDidMount and coponentDidUpdate
+    // Similar to componentDidMount and componentDidUpdate
     useEffect(() => {
       // This querySlector updates the counter display for the countByFive variable.
       document.querySelector(".counter-display-five").innerHTML = `The count is ${countByFive}`;

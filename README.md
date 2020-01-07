@@ -11,6 +11,7 @@ Just download the repo and checkout the code. There will be a number of comments
 Here are a list of hooks that are currently being demonstrated:
 
 * useState
+* useEffect
   
 ### Author
 
