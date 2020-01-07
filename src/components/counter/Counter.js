@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Counter.css'
 
 function NumberCounter() {
@@ -10,11 +10,17 @@ function NumberCounter() {
     const [countByOne, setCountOne] = useState(0);
     const [countByFive, setCountFive] = useState(0);
 
+    // Similar to componentDidMount and coponentDidUpdate
+    useEffect(() => {
+      // This querySlector updates the counter display for the countByFive variable.
+      document.querySelector(".counter-display-five").innerHTML = `The count is ${countByFive}`;
+    })
+
     return (
       <div className="counter-block">
         {/* This is the countByOne counter. */}
-        <p>These counters function using the useState React Hook</p>
         <div className="counter-one">
+          <p className="counter-description">This counters uses the useState React Hook</p>
           <p>The count is {countByOne}</p>
           <button onClick={() => setCountOne(countByOne + 1)}>
             Increase Count by 1
@@ -28,7 +34,8 @@ function NumberCounter() {
         </div>
         {/* This is the countByFive counter */}
         <div className="counter-five">
-          <p>The count is {countByFive}</p>
+          <p className="counter-description">This counters uses the useState and useEffect React Hooks</p>
+          <p className="counter-display-five"></p>
           <button onClick={() => setCountFive(countByFive + 5)}>
             Increase Count by 5
           </button>
