@@ -8,7 +8,7 @@ const useModal = () => {
 
     // This function toggles the modal to show or be hidden.
     function toggle() {
-        setIsShowing(isShowing)
+        setIsShowing(!isShowing)
     }
 
     // Returns the isShowing variable and the toggle function so that the component
